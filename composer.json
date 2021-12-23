@@ -1,0 +1,51 @@
+{
+  "name": "joemugen/eloquenty-model",
+  "description": "A Laravel eloquent-like model class, for Laravel and other frameworks",
+  "type": "library",
+  "version": "1.0.0",
+  "keywords": [
+    "laravel",
+    "eloquent",
+    "model"
+  ],
+  "homepage": "https://github.com/joemugen/eloquenty-model",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "authors": [
+    {
+      "name": "Joe FRANCOIS",
+      "email": "joe@ffs.place"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "ext-json": "*",
+    "illuminate/contracts": "^7.0|^8.0",
+    "illuminate/support": "^7.0|^8.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^v6.23",
+    "nunomaduro/phpinsights": "^v2.0",
+    "spatie/laravel-permission": "^5.3.1",
+    "pestphp/pest-plugin-laravel": "^1.1",
+    "pestphp/pest-plugin-faker": "^1.0",
+    "pestphp/pest-plugin-global-assertions": "^1.0",
+    "pestphp/pest-plugin-parallel": "^0.3.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "JoeMugen\\EloquentyModel\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "JoeMugen\\EloquentyModel\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "codestyle": "./vendor/bin/phpinsights -v",
+    "codestyle-fix": "./vendor/bin/phpinsights --fix",
+    "test": "./vendor/bin/pest --parallel --coverage"
+  }
+}
